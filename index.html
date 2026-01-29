@@ -3,71 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Kevin Januar Perkasa</title>
+    <title>CV Kevin Januar Perkasa - Olympus Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* --- CSS SETUP (Tema GitHub Dark Mode) --- */
+        /* --- CSS SETUP (TEMA OLYMPUS / ZEUS) --- */
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent: #238636; /* Warna Hijau */
-            --border: #30363d;
-            --link: #58a6ff;
+            --bg-color: #1a0b2e; /* Ungu Gelap */
+            --bg-gradient: linear-gradient(135deg, #2e004b 0%, #11001c 100%);
+            --card-bg: rgba(40, 10, 60, 0.7); /* Transparan Ungu */
+            --text-main: #f0f0f0;
+            --text-gold: #FFD700; /* Warna Emas Zeus */
+            --border-gold: #FFD700;
+            --accent: #b8860b;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
+            font-family: 'Lato', sans-serif; /* Font untuk teks biasa */
+            background: var(--bg-gradient);
             color: var(--text-main);
             line-height: 1.6;
             padding: 20px;
+            min-height: 100vh;
+            background-attachment: fixed; /* Agar background tetap saat discroll */
+        }
+
+        /* Efek Kilat Background (Opsional - Visual) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 10%, rgba(138, 43, 226, 0.2), transparent 50%);
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
+            border: 2px solid var(--border-gold);
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
         }
 
         /* --- HEADER --- */
         header {
             text-align: center;
             padding: 50px 20px;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 2px solid var(--border-gold);
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 3px solid var(--accent);
+            border: 4px solid var(--border-gold);
             margin-bottom: 15px;
             object-fit: cover;
-            background-color: var(--card-bg);
+            background-color: #000;
+            box-shadow: 0 0 15px var(--border-gold); /* Efek bersinar */
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #ffffff;
+            font-family: 'Cinzel', serif; /* Font Judul */
+            font-size: 2.8rem;
+            color: var(--text-gold);
             margin-bottom: 5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
         }
 
         .role {
-            color: var(--text-muted);
+            font-family: 'Cinzel', serif;
+            color: #d8b4fe;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .info-bar {
             margin-bottom: 20px;
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: #ddd;
         }
 
         .info-bar span {
@@ -76,121 +101,145 @@
         }
 
         .address {
-            color: var(--link);
-            background: rgba(88, 166, 255, 0.1);
-            padding: 2px 10px;
-            border-radius: 12px;
+            color: var(--text-gold);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
 
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .btn {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 8px 16px;
-            border-radius: 6px;
+            background-color: transparent;
+            border: 1px solid var(--border-gold);
+            color: var(--text-gold);
+            padding: 10px 20px;
+            border-radius: 50px; /* Tombol bulat */
             text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+            font-weight: bold;
+            font-family: 'Cinzel', serif;
+            transition: 0.3s;
             display: flex;
             align-items: center;
             gap: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
-            background-color: var(--border);
-            color: #fff;
+            background-color: var(--border-gold);
+            color: #2e004b; /* Teks jadi ungu saat dihover */
+            box-shadow: 0 0 15px var(--border-gold);
         }
 
         .btn-primary {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #2ea043;
+            background-color: rgba(255, 215, 0, 0.2);
         }
 
         /* --- CONTENT SECTION --- */
         section {
-            padding: 30px 0;
-            border-bottom: 1px solid var(--border);
+            padding: 30px 20px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        section:last-child {
+            border-bottom: none;
         }
 
         h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--text-gold);
+            text-align: center;
+            position: relative;
+        }
+        
+        /* Garis hiasan di bawah judul */
+        h2::after {
+            content: "⚡";
+            display: block;
             font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #fff;
-            border-left: 4px solid var(--accent);
-            padding-left: 10px;
+            margin-top: 5px;
+            opacity: 0.8;
         }
 
         /* --- SKILLS TAGS --- */
         .skills-wrapper {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
+            justify-content: center;
         }
 
         .tag {
-            background-color: rgba(56, 139, 253, 0.15);
-            color: #58a6ff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            background: linear-gradient(45deg, #b8860b, #ffd700);
+            color: #2e004b;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            font-family: 'Cinzel', serif;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         /* --- CARDS --- */
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(255, 215, 0, 0.4);
             padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(5px); /* Efek kaca buram */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-gold);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
         }
 
         .card-title {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #fff;
+            font-family: 'Cinzel', serif;
         }
 
         .card-date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            white-space: nowrap;
-            background: var(--border);
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-gold);
+            font-weight: bold;
         }
 
         .card p {
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: #ddd;
+            margin-top: 5px;
         }
 
         /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
             font-size: 0.9rem;
-            color: var(--text-muted);
+            color: var(--text-gold);
+            font-family: 'Cinzel', serif;
         }
 
         /* Mobile Responsive */
@@ -201,8 +250,9 @@
             }
             .info-bar span {
                 display: block;
-                margin-bottom: 5px;
+                margin-bottom: 8px;
             }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -214,12 +264,12 @@
             <img src="https://github.com/github.png" alt="Foto Profil" class="profile-img">
             
             <h1>Kevin Januar Perkasa</h1>
-            <p class="role">Pelajar SMA (2023 - 2026)</p>
+            <p class="role">⚡ Pelajar SMA (2023 - 2026) ⚡</p>
             
             <div class="info-bar">
-                <span class="address">📍 Kp Babakan Halte</span>
+                <span class="address">🏛️ Kp Babakan Halte</span>
                 <span>🎂 22 Januari 2008</span>
-                <span>🎵 Hobi: Mendengarkan Musik</span>
+                <span>🎵 Hobi: Dengerin Musik</span>
             </div>
             
             <div class="btn-group">
@@ -227,52 +277,67 @@
                     WhatsApp
                 </a>
                 <a href="https://www.tiktok.com/@twentytwojanuaryyy" class="btn" target="_blank">
-                    TikTok: @twentytwojanuaryyy
+                    TikTok
                 </a>
             </div>
         </header>
 
         <section>
-            <h2>🚀 Tentang Saya</h2>
-            <p>
-                Halo! Saya Kevin Januar Perkasa, lahir pada 22 Januari 2008. Saya adalah siswa yang aktif dan memiliki semangat belajar yang tinggi. 
-                Saya dikenal sebagai pribadi yang <strong>mudah beradaptasi</strong> dengan lingkungan baru. Di waktu luang, saya sangat menikmati mendengarkan musik untuk menjaga produktivitas.
+            <h2>Tentang Saya</h2>
+            <p style="text-align: center;">
+                Halo! Saya Kevin Januar Perkasa, lahir pada 22 Januari 2008. Saya adalah pribadi yang <strong>mudah beradaptasi</strong> dengan lingkungan baru dan memiliki semangat juang tinggi. Saat ini saya sedang menempuh pendidikan akhir di tingkat SMA.
             </p>
         </section>
 
         <section>
-            <h2>🎓 Pendidikan</h2>
+            <h2>Riwayat Pendidikan</h2>
             
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Sekolah Menengah Atas (SMA)</div>
                     <div class="card-date">2023 - 2026</div>
                 </div>
-                <p>Status: Pelajar Aktif</p>
-                <p>Fokus pada pengembangan akademik dan aktif dalam kegiatan ekstrakurikuler sekolah.</p>
+                <p>Status: Calon Lulusan 2026</p>
+                <p>Aktif dalam kegiatan akademik dan non-akademik (OSIS & Olahraga).</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Sekolah Menengah Pertama (SMP)</div>
+                    <div class="card-date">2020 - 2023</div>
+                </div>
+                <p>Status: Lulus Tahun 2023</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Sekolah Dasar (SD)</div>
+                    <div class="card-date">2014 - 2020</div>
+                </div>
+                <p>Status: Lulus Tahun 2020</p>
             </div>
         </section>
 
         <section>
-            <h2>⚡ Keahlian & Bahasa</h2>
+            <h2>Keahlian & Bahasa</h2>
             <div class="skills-wrapper">
                 <span class="tag">Mudah Beradaptasi</span>
-                <span class="tag">Kerjasama Tim (Teamwork)</span>
-                <span class="tag">Bahasa Indonesia (Aktif)</span>
+                <span class="tag">Kerjasama Tim</span>
+                <span class="tag">Bahasa Indonesia</span>
                 <span class="tag">Microsoft Office</span>
-                <span class="tag">Komunikasi Dasar</span>
+                <span class="tag">Komunikasi</span>
             </div>
         </section>
 
         <section>
-            <h2>💼 Pengalaman Organisasi</h2>
+            <h2>Pengalaman</h2>
             
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Pengurus OSIS</div>
                     <div class="card-date">SMA</div>
                 </div>
-                <p>Aktif berpartisipasi dalam perencanaan dan pelaksanaan kegiatan sekolah. Belajar tentang kepemimpinan, manajemen waktu, dan koordinasi antar siswa.</p>
+                <p>Aktif berpartisipasi dalam perencanaan dan pelaksanaan kegiatan sekolah. Belajar tentang kepemimpinan dan koordinasi.</p>
             </div>
 
             <div class="card">
@@ -285,7 +350,8 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 Kevin Januar Perkasa. Hosted on GitHub.</p>
+            <p>&copy; 2026 Kevin Januar Perkasa.</p>
+            <p style="margin-top:5px; font-size: 0.8rem;">⚡ Dibuat dengan Tema Olympus ⚡</p>
         </footer>
 
     </div>
