@@ -11,7 +11,7 @@
             --card-bg: #161b22;
             --text-main: #c9d1d9;
             --text-muted: #8b949e;
-            --accent: #238636; /* Warna Hijau Tombol GitHub */
+            --accent: #238636; /* Warna Hijau */
             --border: #30363d;
             --link: #58a6ff;
         }
@@ -38,7 +38,7 @@
         /* --- HEADER --- */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -64,14 +64,22 @@
             margin-bottom: 10px;
         }
 
+        .info-bar {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .info-bar span {
+            margin: 0 8px;
+            display: inline-block;
+        }
+
         .address {
             color: var(--link);
-            font-size: 1rem;
-            margin-bottom: 20px;
-            display: inline-block;
             background: rgba(88, 166, 255, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 2px 10px;
+            border-radius: 12px;
         }
 
         .btn-group {
@@ -79,6 +87,7 @@
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            margin-top: 15px;
         }
 
         .btn {
@@ -92,7 +101,7 @@
             transition: 0.2s;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         .btn:hover {
@@ -112,7 +121,7 @@
 
         /* --- CONTENT SECTION --- */
         section {
-            padding: 40px 0;
+            padding: 30px 0;
             border-bottom: 1px solid var(--border);
         }
 
@@ -120,6 +129,8 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
             color: #fff;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
         }
 
         /* --- SKILLS TAGS --- */
@@ -138,7 +149,7 @@
             font-weight: 500;
         }
 
-        /* --- CARDS (Education & Experience) --- */
+        /* --- CARDS --- */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
@@ -151,7 +162,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .card-title {
@@ -164,6 +175,9 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             white-space: nowrap;
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 4px;
         }
 
         .card p {
@@ -178,6 +192,18 @@
             font-size: 0.9rem;
             color: var(--text-muted);
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .card-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .info-bar span {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -188,23 +214,29 @@
             <img src="https://github.com/github.png" alt="Foto Profil" class="profile-img">
             
             <h1>Kevin Januar Perkasa</h1>
-            <p class="role">Siswa Kelas 12 SMA | Junior Programmer</p>
-            <div class="address">📍 Kp Babakan Halte</div>
+            <p class="role">Pelajar SMA (2023 - 2026)</p>
+            
+            <div class="info-bar">
+                <span class="address">📍 Kp Babakan Halte</span>
+                <span>🎂 22 Januari 2008</span>
+                <span>🎵 Hobi: Mendengarkan Musik</span>
+            </div>
             
             <div class="btn-group">
                 <a href="https://wa.me/6289530193368" class="btn btn-primary" target="_blank">
-                    WhatsApp: 0895-3019-3368
+                    WhatsApp
                 </a>
-                <a href="https://github.com/" class="btn" target="_blank">GitHub</a>
+                <a href="https://www.tiktok.com/@twentytwojanuaryyy" class="btn" target="_blank">
+                    TikTok: @twentytwojanuaryyy
+                </a>
             </div>
         </header>
 
         <section>
             <h2>🚀 Tentang Saya</h2>
             <p>
-                Halo! Saya Kevin Januar Perkasa, seorang siswa SMA yang memiliki ketertarikan tinggi di dunia teknologi dan pemrograman. 
-                Meskipun berlatar belakang SMA, saya aktif belajar *coding* secara mandiri dan siap mengembangkan diri menjadi developer profesional.
-                Saya disiplin, mau belajar hal baru, dan berdomisili di Kp Babakan Halte.
+                Halo! Saya Kevin Januar Perkasa, lahir pada 22 Januari 2008. Saya adalah siswa yang aktif dan memiliki semangat belajar yang tinggi. 
+                Saya dikenal sebagai pribadi yang <strong>mudah beradaptasi</strong> dengan lingkungan baru. Di waktu luang, saya sangat menikmati mendengarkan musik untuk menjaga produktivitas.
             </p>
         </section>
 
@@ -214,40 +246,46 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Sekolah Menengah Atas (SMA)</div>
-                    <div class="card-date">2021 - Sekarang (Kelas 12)</div>
+                    <div class="card-date">2023 - 2026</div>
                 </div>
-                <p>Jurusan: IPA / IPS (Sesuaikan) </p>
-                <p>Aktif mempelajari dasar-dasar komputer dan pemrograman di luar jam sekolah.</p>
+                <p>Status: Pelajar Aktif</p>
+                <p>Fokus pada pengembangan akademik dan aktif dalam kegiatan ekstrakurikuler sekolah.</p>
             </div>
         </section>
 
         <section>
-            <h2>⚡ Keahlian (Skills)</h2>
+            <h2>⚡ Keahlian & Bahasa</h2>
             <div class="skills-wrapper">
-                <span class="tag">HTML5 & CSS3</span>
+                <span class="tag">Mudah Beradaptasi</span>
+                <span class="tag">Kerjasama Tim (Teamwork)</span>
+                <span class="tag">Bahasa Indonesia (Aktif)</span>
                 <span class="tag">Microsoft Office</span>
-                <span class="tag">Editing Video/Foto</span>
-                <span class="tag">Bahasa Inggris (Pasif)</span>
-                <span class="tag">Kerjasama Tim</span>
+                <span class="tag">Komunikasi Dasar</span>
             </div>
         </section>
 
         <section>
-            <h2>💼 Pengalaman & Proyek</h2>
+            <h2>💼 Pengalaman Organisasi</h2>
             
             <div class="card">
-                <div class="card-title">Website Portofolio Pribadi</div>
-                <p>Membangun website CV online menggunakan HTML dan CSS yang di-hosting di GitHub Pages.</p>
+                <div class="card-header">
+                    <div class="card-title">Pengurus OSIS</div>
+                    <div class="card-date">SMA</div>
+                </div>
+                <p>Aktif berpartisipasi dalam perencanaan dan pelaksanaan kegiatan sekolah. Belajar tentang kepemimpinan, manajemen waktu, dan koordinasi antar siswa.</p>
             </div>
 
             <div class="card">
-                <div class="card-title">Tugas Sekolah / Organisasi</div>
-                <p>Berpartisipasi aktif dalam kegiatan sekolah dan membantu dokumentasi acara menggunakan teknologi digital.</p>
+                <div class="card-header">
+                    <div class="card-title">Tim Futsal Sekolah</div>
+                    <div class="card-date">SMA</div>
+                </div>
+                <p>Anggota aktif tim futsal. Melatih kedisiplinan fisik, sportivitas, dan strategi kerjasama tim di lapangan.</p>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2024 Kevin Januar Perkasa. Dibuat dengan HTML.</p>
+            <p>&copy; 2026 Kevin Januar Perkasa. Hosted on GitHub.</p>
         </footer>
 
     </div>
