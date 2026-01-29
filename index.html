@@ -3,234 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV & Portofolio Saya</title>
+    <title>Portofolio & CV</title>
     <style>
-        /* --- CSS DASAR (STYLING) --- */
+        /* --- CSS SETUP (Tema GitHub Dark) --- */
         :root {
-            --primary-color: #2563eb; /* Warna Biru Utama */
-            --dark-bg: #1e293b;
-            --light-bg: #f8fafc;
-            --text-color: #334155;
-            --card-bg: #ffffff;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #238636; /* Warna Hijau Tombol GitHub */
+            --border: #30363d;
+            --link: #58a6ff;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--light-bg);
-            color: var(--text-color);
+            background-color: var(--bg-color);
+            color: var(--text-main);
             line-height: 1.6;
+            padding: 20px;
         }
 
-        /* --- HEADER / HERO SECTION --- */
-        header {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-        }
-
-        .social-links {
-            margin-top: 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-
-        /* --- CONTAINER --- */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
         }
 
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 15px;
+            object-fit: cover;
+            background-color: var(--card-bg); /* Placeholder jika tidak ada foto */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .role {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--link);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--border);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+
+        /* --- CONTENT SECTION --- */
         section {
-            margin-bottom: 3rem;
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
         }
 
         h2 {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-bg);
-            display: inline-block;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* --- SKILLS --- */
-        .skills-grid {
+        /* --- SKILLS TAGS --- */
+        .skills-wrapper {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .skill-tag {
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 5px 15px;
+        .tag {
+            background-color: rgba(56, 139, 253, 0.15);
+            color: #58a6ff;
+            padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 500;
         }
 
-        /* --- EXPERIENCE / EDUCATION --- */
-        .timeline-item {
-            margin-bottom: 1.5rem;
-            border-left: 3px solid var(--primary-color);
-            padding-left: 1rem;
+        /* --- CARDS (Experience & Projects) --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
         }
 
-        .timeline-title {
-            font-weight: bold;
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
             font-size: 1.1rem;
-        }
-
-        .timeline-date {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* --- PROJECTS --- */
-        .project-card {
-            border: 1px solid #e2e8f0;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: #fff;
         }
 
-        .project-tech {
-            font-size: 0.8rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
         }
 
         /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--dark-bg);
-            color: #94a3b8;
+            padding: 40px 0;
             font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
-        /* --- RESPONSIVE MOBILE --- */
+        /* Responsif HP */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .container { padding: 1rem; }
+            .card-header {
+                flex-direction: column;
+            }
+            .card-date {
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Nama Lengkap Kamu</h1> 
-        <p>Siswa SMK Jurusan RPL | Junior Web Developer</p>
-        
-        <div class="social-links">
-            <a href="mailto:emailkamu@gmail.com" class="btn">Email</a>
-            <a href="https://github.com/usernamekamu" class="btn" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/usernamekamu" class="btn" target="_blank">LinkedIn</a>
-        </div>
-    </header>
-
     <div class="container">
         
-        <section id="about">
-            <h2>Tentang Saya</h2>
+        <header>
+            <img src="https://github.com/github.png" alt="Foto Profil" class="profile-img">
+            
+            <h1>Nama Kamu</h1>
+            <p class="role">Siswa SMK RPL | Junior Web Developer</p>
+            
+            <div class="btn-group">
+                <a href="mailto:emailmu@gmail.com" class="btn btn-primary">Hubungi Saya</a>
+                <a href="https://github.com/username-kamu" class="btn">GitHub</a>
+                <a href="https://linkedin.com/in/username-kamu" class="btn">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>🚀 Tentang Saya</h2>
             <p>
-                Halo! Saya adalah siswa kelas 12 di SMK [Nama Sekolah] yang memiliki passion di bidang pemrograman web. 
-                Saya suka memecahkan masalah melalui kode dan saat ini sedang mendalami teknologi Front-end seperti HTML, CSS, dan JavaScript.
-                Saya sedang mencari kesempatan magang atau proyek freelance untuk mengembangkan skill saya.
+                Hai! Saya adalah siswa kelas 12 SMK yang antusias mempelajari teknologi web modern. 
+                Saat ini saya fokus mendalami <strong>Front-end Development</strong> dan suka bereksperimen dengan kode di GitHub. 
+                Saya tipe orang yang cepat belajar dan siap untuk berkontribusi dalam tim.
             </p>
         </section>
 
-        <section id="skills">
-            <h2>Keahlian Teknis</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript (Basic)</span>
-                <span class="skill-tag">PHP</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">Bootstrap/Tailwind</span>
-                <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">Microsoft Office</span>
+        <section>
+            <h2>⚡ Tech Stack</h2>
+            <div class="skills-wrapper">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">PHP (Dasar)</span>
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">Figma</span>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Pendidikan</h2>
+        <section>
+            <h2>💼 Pengalaman & Organisasi</h2>
             
-            <div class="timeline-item">
-                <div class="timeline-title">SMK Negeri [Nomor/Nama Kota]</div>
-                <div class="timeline-date">2021 - Sekarang (Kelas 12)</div>
-                <p>Jurusan Rekayasa Perangkat Lunak (RPL).</p>
-                <ul>
-                    <li>Aktif dalam Organisasi OSIS sebagai Sekbid Teknologi.</li>
-                    <li>Rata-rata nilai produktif: 85.0</li>
-                </ul>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Anggota Divisi IT - OSIS</div>
+                    <div class="card-date">2023 - Sekarang</div>
+                </div>
+                <p>Bertanggung jawab mengelola dokumentasi digital acara sekolah dan merawat inventaris lab komputer.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Peserta Prakerin (Magang)</div>
+                    <div class="card-date">Jan 2023 - Mar 2023</div>
+                </div>
+                <p>Magang di PT Teknologi Maju. Belajar tentang instalasi jaringan LAN dan maintenance hardware komputer kantor.</p>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Proyek Sekolah & Pribadi</h2>
-            
-            <div class="project-card">
-                <div class="project-title">Website Perpustakaan Sekolah</div>
-                <div class="project-tech">PHP Native - MySQL - Bootstrap</div>
-                <p>Membuat sistem peminjaman buku sederhana untuk tugas akhir semester. Fitur mencakup login admin, input data buku, dan pencatatan peminjam.</p>
-                <a href="#" style="font-size: 0.9rem; color: #2563eb;">Lihat Demo &rarr;</a>
+        <section>
+            <h2>💻 Proyek Unggulan</h2>
+
+            <div class="card">
+                <div class="card-title">Website Profil Sekolah</div>
+                <p>Website statis responsif yang menampilkan informasi jurusan dan ekstrakurikuler sekolah.</p>
+                <a href="#" class="project-link">Lihat Repo &rarr;</a>
             </div>
 
-            <div class="project-card">
-                <div class="project-title">Biodata Diri (Personal Site)</div>
-                <div class="project-tech">HTML - CSS</div>
-                <p>Website statis portofolio pertama saya yang responsif dan menampilkan profil serta galeri foto kegiatan sekolah.</p>
+            <div class="card">
+                <div class="card-title">Aplikasi Kasir Sederhana</div>
+                <p>Dibuat menggunakan Python (CLI) untuk menghitung total belanjaan dan kembalian secara otomatis.</p>
+                <a href="#" class="project-link">Lihat Repo &rarr;</a>
             </div>
         </section>
+
+        <footer>
+            <p>Dibuat dengan kode & kopi ☕ oleh Nama Kamu.</p>
+        </footer>
 
     </div>
-
-    <footer>
-        <p>&copy; 2024 Nama Kamu. Dibuat dengan HTML & CSS.</p>
-    </footer>
 
 </body>
 </html>
