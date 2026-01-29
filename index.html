@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio & CV</title>
+    <title>CV Kevin Januar Perkasa</title>
     <style>
-        /* --- CSS SETUP (Tema GitHub Dark) --- */
+        /* --- CSS SETUP (Tema GitHub Dark Mode) --- */
         :root {
             --bg-color: #0d1117;
             --card-bg: #161b22;
@@ -49,18 +49,29 @@
             border: 3px solid var(--accent);
             margin-bottom: 15px;
             object-fit: cover;
-            background-color: var(--card-bg); /* Placeholder jika tidak ada foto */
+            background-color: var(--card-bg);
         }
 
         h1 {
             font-size: 2.5rem;
             color: #ffffff;
+            margin-bottom: 5px;
         }
 
         .role {
             color: var(--text-muted);
             font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .address {
+            color: var(--link);
+            font-size: 1rem;
             margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(88, 166, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
         }
 
         .btn-group {
@@ -73,12 +84,15 @@
         .btn {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            color: var(--link);
+            color: var(--text-main);
             padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .btn:hover {
@@ -105,9 +119,7 @@
         h2 {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            color: #fff;
         }
 
         /* --- SKILLS TAGS --- */
@@ -126,7 +138,7 @@
             font-weight: 500;
         }
 
-        /* --- CARDS (Experience & Projects) --- */
+        /* --- CARDS (Education & Experience) --- */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
@@ -159,34 +171,12 @@
             color: var(--text-muted);
         }
 
-        .project-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--link);
-            text-decoration: none;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
         /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 40px 0;
             font-size: 0.9rem;
             color: var(--text-muted);
-        }
-
-        /* Responsif HP */
-        @media (max-width: 600px) {
-            .card-header {
-                flex-direction: column;
-            }
-            .card-date {
-                margin-top: 5px;
-            }
         }
     </style>
 </head>
@@ -197,76 +187,67 @@
         <header>
             <img src="https://github.com/github.png" alt="Foto Profil" class="profile-img">
             
-            <h1>Nama Kamu</h1>
-            <p class="role">Siswa SMK RPL | Junior Web Developer</p>
+            <h1>Kevin Januar Perkasa</h1>
+            <p class="role">Siswa Kelas 12 SMA | Junior Programmer</p>
+            <div class="address">📍 Kp Babakan Halte</div>
             
             <div class="btn-group">
-                <a href="mailto:emailmu@gmail.com" class="btn btn-primary">Hubungi Saya</a>
-                <a href="https://github.com/username-kamu" class="btn">GitHub</a>
-                <a href="https://linkedin.com/in/username-kamu" class="btn">LinkedIn</a>
+                <a href="https://wa.me/6289530193368" class="btn btn-primary" target="_blank">
+                    WhatsApp: 0895-3019-3368
+                </a>
+                <a href="https://github.com/" class="btn" target="_blank">GitHub</a>
             </div>
         </header>
 
         <section>
             <h2>🚀 Tentang Saya</h2>
             <p>
-                Hai! Saya adalah siswa kelas 12 SMK yang antusias mempelajari teknologi web modern. 
-                Saat ini saya fokus mendalami <strong>Front-end Development</strong> dan suka bereksperimen dengan kode di GitHub. 
-                Saya tipe orang yang cepat belajar dan siap untuk berkontribusi dalam tim.
+                Halo! Saya Kevin Januar Perkasa, seorang siswa SMA yang memiliki ketertarikan tinggi di dunia teknologi dan pemrograman. 
+                Meskipun berlatar belakang SMA, saya aktif belajar *coding* secara mandiri dan siap mengembangkan diri menjadi developer profesional.
+                Saya disiplin, mau belajar hal baru, dan berdomisili di Kp Babakan Halte.
             </p>
         </section>
 
         <section>
-            <h2>⚡ Tech Stack</h2>
-            <div class="skills-wrapper">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Bootstrap</span>
-                <span class="tag">PHP (Dasar)</span>
-                <span class="tag">Git & GitHub</span>
-                <span class="tag">Figma</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>💼 Pengalaman & Organisasi</h2>
+            <h2>🎓 Pendidikan</h2>
             
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Anggota Divisi IT - OSIS</div>
-                    <div class="card-date">2023 - Sekarang</div>
+                    <div class="card-title">Sekolah Menengah Atas (SMA)</div>
+                    <div class="card-date">2021 - Sekarang (Kelas 12)</div>
                 </div>
-                <p>Bertanggung jawab mengelola dokumentasi digital acara sekolah dan merawat inventaris lab komputer.</p>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">Peserta Prakerin (Magang)</div>
-                    <div class="card-date">Jan 2023 - Mar 2023</div>
-                </div>
-                <p>Magang di PT Teknologi Maju. Belajar tentang instalasi jaringan LAN dan maintenance hardware komputer kantor.</p>
+                <p>Jurusan: IPA / IPS (Sesuaikan) </p>
+                <p>Aktif mempelajari dasar-dasar komputer dan pemrograman di luar jam sekolah.</p>
             </div>
         </section>
 
         <section>
-            <h2>💻 Proyek Unggulan</h2>
+            <h2>⚡ Keahlian (Skills)</h2>
+            <div class="skills-wrapper">
+                <span class="tag">HTML5 & CSS3</span>
+                <span class="tag">Microsoft Office</span>
+                <span class="tag">Editing Video/Foto</span>
+                <span class="tag">Bahasa Inggris (Pasif)</span>
+                <span class="tag">Kerjasama Tim</span>
+            </div>
+        </section>
 
+        <section>
+            <h2>💼 Pengalaman & Proyek</h2>
+            
             <div class="card">
-                <div class="card-title">Website Profil Sekolah</div>
-                <p>Website statis responsif yang menampilkan informasi jurusan dan ekstrakurikuler sekolah.</p>
-                <a href="#" class="project-link">Lihat Repo &rarr;</a>
+                <div class="card-title">Website Portofolio Pribadi</div>
+                <p>Membangun website CV online menggunakan HTML dan CSS yang di-hosting di GitHub Pages.</p>
             </div>
 
             <div class="card">
-                <div class="card-title">Aplikasi Kasir Sederhana</div>
-                <p>Dibuat menggunakan Python (CLI) untuk menghitung total belanjaan dan kembalian secara otomatis.</p>
-                <a href="#" class="project-link">Lihat Repo &rarr;</a>
+                <div class="card-title">Tugas Sekolah / Organisasi</div>
+                <p>Berpartisipasi aktif dalam kegiatan sekolah dan membantu dokumentasi acara menggunakan teknologi digital.</p>
             </div>
         </section>
 
         <footer>
-            <p>Dibuat dengan kode & kopi ☕ oleh Nama Kamu.</p>
+            <p>&copy; 2024 Kevin Januar Perkasa. Dibuat dengan HTML.</p>
         </footer>
 
     </div>
